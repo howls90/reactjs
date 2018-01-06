@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import React, { Component } from 'react';
 import logo from './images/logo.svg';
 import './css/Header.css';
@@ -19,7 +20,11 @@ class Header extends Component {
           <img src={logo} alt="logo" />
           <h2>{title}</h2>
           <ul className="Menu">
-            {items && items.map((item, key) => <li key={key}>{item.title}</li>)}
+            {
+              items && items.map(
+                (item, key) => <li key={key} ><Link to={item.url}>{item.title}</Link></li>
+              )
+            }
           </ul>
         </div>
       </div>

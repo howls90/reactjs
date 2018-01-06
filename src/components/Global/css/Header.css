@@ -26,3 +26,12 @@
   display: inline-block;
   padding-right: 10px
 }
+
+.Menu a {
+  color: #CCC;
+  text-decoration: none;
+}
+
+.Menu a:hover {
+  color: #EEE;
+}
