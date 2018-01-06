@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import './css/Footer.css';
 
+import PropTypes from 'prop-types';
+
 class Footer extends Component {
+  static propTypes = {
+  	copyright: PropTypes.string 
+  };
+
   render() {
+  	const { copyright = '&copy; ReactJS 2017'}  = this.props;
     return (
       <div className="Footer">
-        <p>Footer - Copyright</p>
+        <p dangerouslySetInnerHTML={{ __html: copyright }}/>
       </div>
     );
   }
